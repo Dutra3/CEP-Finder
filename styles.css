@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: radial-gradient(circle at 50% -9.3%, #faffff 0, #d8f0fa 25%, #b5def2 50%, #92cbeb 75%, #72b9e5 100%);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+#title {
+    height: 28vh;
+    text-align: center;
+    font-size: 3.2rem;
+}
+
+.hide {
+    display: none;
+}
+
+#main-content {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+#researcher-box {
+    margin-bottom: 3.2rem;
+}
+
+#cep,
+#search,
+#clean,
+#street,
+#city,
+#state {
+    height: 3.2rem;
+    font-size: 1.6rem;
+    border-radius: 1.1rem;
+}
+
+#search,
+#clean {
+    display: inline-block;
+    width: 12rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    background-color: hsl(0, 0%, 2%);
+}
+
+#street,
+#city,
+#state {
+    margin-bottom: 1.2rem;
+}
+
+#label {
+    font-size: 1.6rem;
+    display: block;
+    text-align: start;
+}
+
+#main-footer {
+    height: 6.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#main-footer p {
+    font-size: 1.6rem;
+}
+
+
+@media (min-width: 960px) {
+    
+    #title {
+        font-size: 3.6rem;
+    }
+    
+    #researcher-box {
+        margin-bottom: 5rem;
+    }
+    
+    #label {
+        font-size: 2rem;
+    }
+}

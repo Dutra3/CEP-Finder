@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./assets/mailbox.png" type="image/x-png">
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Buscador de CEP</h1>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div id="researcher-box">
+            <label for="name" id="label">CEP: 00000-000</label>
+            <input type="text" id="cep" maxlength="8">
+            <div>
+                <input type="submit" id="search" value="Pesquisar">
+                <button id="clean">Limpar Campo</button>
+            </div>
+        </div>
+        <div id="response" class="hide">
+            <label for="name" id="label">Rua:</label>
+            <input type="text" id="street" disabled>
+            
+            <label for="name" id="label">Cidade:</label>
+            <input type="text" id="city" disabled>
+
+            <label for="name" id="label">Estado:</label>
+            <input type="text" id="state" disabled>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        <p>Gabriel Dutra - Teste técnico &copy 2022</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
