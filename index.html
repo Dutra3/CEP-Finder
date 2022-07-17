@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de CEP</title>
+    <title>CEP Finder</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles.css">
@@ -14,33 +14,33 @@
 </head>
 <body>
     <header>
-        <div id="title">
-            <h1>Buscador de CEP</h1>
+        <div class="title">
+            <h1>CEP Finder</h1>
         </div>
     </header>
 
-    <main id="main-content">
-        <div id="researcher-box">
-            <label for="name" id="label">CEP: 00000-000</label>
-            <input type="text" id="cep" maxlength="8">
+    <main class="main-content">
+        <div class="researcher-box">
+            <label class="label" for="name">CEP: 00000-000</label>
+            <input id="cep" class="input" type="text" maxlength="9">
             <div>
-                <input type="submit" id="search" value="Pesquisar">
-                <button id="clean">Limpar Campo</button>
+                <input id="search" class="button" type="submit" value="Pesquisar">
+                <button id="clean" class="button">Limpar Campo</button>
             </div>
         </div>
         <div id="response" class="hide">
-            <label for="name" id="label">Rua:</label>
-            <input type="text" id="street" disabled>
+            <label class="label" for="name">Rua:</label>
+            <input id="street" class="input" type="text" disabled>
             
-            <label for="name" id="label">Cidade:</label>
-            <input type="text" id="city" disabled>
+            <label class="label" for="name">Cidade:</label>
+            <input id="city" class="input" type="text" disabled>
 
-            <label for="name" id="label">Estado:</label>
-            <input type="text" id="state" disabled>
+            <label class="label" for="name">Estado:</label>
+            <input id="state" class="input" type="text" disabled>
         </div>
     </main>
 
-    <footer id="main-footer">
+    <footer class="main-footer">
         <p>Gabriel Dutra - Teste técnico &copy 2022</p>
     </footer>
 

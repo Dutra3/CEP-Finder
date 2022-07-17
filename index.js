@@ -10,18 +10,18 @@ const fillAddress = (address) => {
     document.getElementById('state').value = address.uf;
 }
 
-cep.addEventListener('keypress', (newCep) => cepMask(newCep.target.value))
+cep.addEventListener('input', (newCep) => cepMask(newCep.target.value))
 
 const cepMask = (newCep) => {
     newCep = newCep.replace(/\D/g, "")
-    newCep = newCep.replace(/(\d{5})(\d{3})/,'$1-$2')
+    newCep = newCep.replace(/(\d{5})(\d{1})/,'$1-$2')
     cep.value = newCep
 }
 
 const validCep = (cep) => cep.length == 8 && /^[0-9]+$/.test(cep);
 
 search.addEventListener('click', async() => {
-    const cepValue = cep.value;
+    const cepValue = cep.value.replace('-', '');
     const url = `https://viacep.com.br/ws/${cepValue}/json/`;
     if (validCep(cepValue)) {
         const data = await fetch(url);
@@ -43,10 +43,3 @@ clean.addEventListener('click', () => {
     document.getElementById('state').value = '';
     response.classList.add('hide')
 })
-
-//  /([0-9]{5})([0-9]{3})/,'$1-$2'
-// /(\d{5})(\d{3})/,'$1-$2'
-// ([0-9]{5})[-]([0-9]{3})
-// cep.replace(/^(\d{5})(\d{3})/,'$1-$2')
-// .replace(/\D/g, '')
-
