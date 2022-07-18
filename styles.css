@@ -6,11 +6,15 @@
 
 :root {
     font-size: 62.5%;
+    --black: #000000;
+    --yellow: #F9A826;
+    --yellow-secondary: #faa51b;
+    --grey: #343434;
+    --grey-secondary: #c0bdbd;
 }
 
 body {
-    background-color: #343434;
-    text-decoration: #44E29E;
+    background-color: var(--grey);
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
@@ -20,7 +24,7 @@ body {
     padding-top: 30px;
     text-align: center;
     font-size: 3.2rem;
-    color: #F9A826;
+    color: var(--yellow);
 }
 
 .hide {
@@ -41,25 +45,22 @@ body {
     margin-bottom: 3.2rem;
 }
 
-#cep,
-#search,
-#clean,
-#street,
-#city,
-#state {
+.input,
+.button {
     height: 3.2rem;
     font-size: 1.6rem;
     border-radius: 1.1rem;
 }
 
 .input {
-    color: black;
+    color: var(--black);
     padding-left: 8px;
     box-shadow: 10px 10px 7px -6px rgba(0,0,0,0.8);
 }
 
-#response .input {
-    background-color: rgb(192, 189, 189);
+.input-disabled {
+    background-color: var(--grey-secondary);
+    margin-bottom: 1.2rem;
 }
 
 .button {
@@ -67,27 +68,21 @@ body {
     width: 100%;
     height: 40px;
     margin-top: 1rem;
-    color: #F9A826;
-    background-color: hsl(0, 0%, 2%);
+    color: var(--yellow);
+    background-color: var(--black);
     box-shadow: 10px 10px 7px -6px rgba(0,0,0,0.8);
     border: none;
-    transition: all 0.3s ease-in-out;;
+    transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-    background-color: #faa51b;
-    color: black;
+    background-color: var(--yellow-secondary);
+    color: var(--black);
     cursor: pointer;
 }
 
-#street,
-#city,
-#state {
-    margin-bottom: 1.2rem;
-}
-
 .label {
-    color: #F9A826;
+    color: var(--yellow);
     font-size: 1.6rem;
     display: block;
     text-align: start;
@@ -99,8 +94,8 @@ body {
     align-items: flex-end;
 }
 
-.main-footer p {
-    color: #F9A826;
+.paragraph  {
+    color: var(--yellow);
     font-size: 1.6rem;
 }
 
